@@ -1,0 +1,22 @@
+/
+# Media folder - contains large video/image files
+Media/*.mp4
+Media/*.png
+Media/*.svg
+# Keep Media.html tracked (don't ignore)
+
+# OS generated files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak

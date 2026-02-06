@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SizeCheck</title>
+        <style>
+            *{
+                padding:0px;
+                margin: 0px;
+                box-sizing:border-box;
+                border: 2px solid black;
+            }
+            .container{
+                max-width: 1200px;
+                padding: 3rem;
+                margin: auto;
+                min-width: 100px;
+                width: 100%; 
+            }
+            .box{
+                padding: 2em;
+                border: 5px solid black;
+            }
+            #img1{
+                float: left;
+                max-width: 100px;
+                height: auto;
+                /* display: block; */
+            }
+            #img2{
+                float: right;
+                max-width: 100px;
+                height: auto;
+                /* display: block; */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Hello From Container</h1>
+            <div class="box">
+                <h1>Hello From Box</h1>
+            </div>
+        </div>
+        <div class="Imgcontent">
+            <figure class="fig1">
+                <img id="img1" src="\Media\data.png">
+                <figcaption>This is the Image </figcaption>
+                <img id="img2"  src="\Media\data.png">
+                <figcaption>This is the Image </figcaption>
+            </figure>
+        </div>
+    </body>
+</html>
