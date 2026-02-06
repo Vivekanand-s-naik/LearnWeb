@@ -1,8 +1,9 @@
-/
+.gitignore
 # Media folder - contains large video/image files
 Media/*.mp4
 Media/*.png
 Media/*.svg
+*.png
 # Keep Media.html tracked (don't ignore)
 
 # OS generated files
