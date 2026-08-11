@@ -1,0 +1,78 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(182, 227, 230);
+    display:flex;
+    
+    justify-content:center;
+    align-items:center;
+}
+.card{
+    height: 80%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    text-align: center;
+    justify-content: space-between;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 3px 3px 50px black;
+}
+.card img{
+
+    height: 30%;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+.card p {
+    overflow: scroll;
+    font-style: italic;
+}
+.plan{
+    margin: 3px auto;
+    padding: 0 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(171, 230, 224) ;
+    height: 15%;
+    width: 90%;
+    border-radius: 10px;
+}
+.plan img{
+    height: 80%;
+    width: 10%;
+
+}
+
+#proceed{
+    margin: 0 auto ;
+    height: 7%;
+    width: 80%;
+    border-radius: 10px;
+    color: azure;
+    box-shadow: 2px 2px 30px black;
+    background: hsla(236, 100%, 8%, 1);
+
+    background: linear-gradient(90deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 28%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 28%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 28%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458E", GradientType=1 );
+}
+.card a{
+    margin: 10px;
+}

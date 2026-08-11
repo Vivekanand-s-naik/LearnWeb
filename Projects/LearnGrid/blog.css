@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 1%;
+}
+
+/* ===== Main Container ===== */
+.container{
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 50px black;
+    background-color:rgb(255, 255, 255);
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 1%;
+    border-radius: 15px;
+}
+
+/* ===== Header ===== */
+.container header{
+    font-size: larger;
+    text-align: center;
+    padding: 2%;
+}
+
+/* ===== Card Grid ===== */
+.cardContainer{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: rgb(255, 255, 255);
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-auto-rows: 450px;
+    padding: 2%;
+    overflow: hidden;
+}
+
+/* ===== Individual Card ===== */
+.card{
+    margin: 2%;
+    border:3px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:2fr 1fr .5fr;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 5px 5px 50px grey;
+    transition: all;
+    transition-duration: 10ms;
+}
+
+.card:hover{
+    scale: 1.05;
+    background-color: rgb(255, 255, 255);
+}
+/* ===== Image Section ===== */
+.cardimg{
+object-fit: cover;
+overflow: hidden;
+}
+
+.cardimg img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ===== Body Section ===== */
+.cardbody{
+
+}
+
+/* Hide scrollbar (all major browsers) */
+.cardbody::-webkit-scrollbar{
+    display: none;
+}
+.body::-webkit-scrollbar{
+    display: none;
+}
+.cardbody{
+    padding: 5%;
+}
+
+/* ===== Info Section ===== */
+.cardinfo{
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+/* Profile Image */
+.cardinfo img{
+    height: 40px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+/* User text */
+.userData span{
+    display: block;
+}
+.userData #name{
+    font-weight: bolder;
+    color: rgb(64, 95, 247);
+}
+.cardinfo #category{
+    padding: 3%;
+    color: blue;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+@media(max-width:800px){
+    .cardContainer{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width:650px){
+    .cardContainer{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:600px){
+    .cardContainer{
+        display:grid;
+        grid-template-columns:  1fr;
+    }
+}

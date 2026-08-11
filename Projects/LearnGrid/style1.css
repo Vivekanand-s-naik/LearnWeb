@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    height: 100%;
+    width:100%;
+    background-color: beige;
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(3, 1fr);
+    padding:5%;
+    gap:3% 3%
+}
+.items{
+    background-color: blanchedalmond;
+    border:3px solid black;
+    display: grid;
+    place-items: center;
+}
+.content{
+    grid-column-start: 3;
+    grid-column-end:6;
+    grid-row-start:2;
+}
+.footer{
+    grid-column-start: 1;
+    grid-column-end:6;
+}
