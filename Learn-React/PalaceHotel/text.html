@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        max-width: 100%;
+        height: auto;
+
+        border-radius: 100px;
+        padding: 12px;
+
+        background: linear-gradient(145deg, #ffffff, #fff8e1);
+        border: 2px solid #ffd54f;
+
+        box-shadow:
+          0 20px 50px rgba(26, 26, 46, 0.15),
+          0 8px 20px rgba(255, 193, 7, 0.2);
+
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+
+      .hero-section img:hover {
+        transform: translateY(-6px) scale(1.02);
+
+        box-shadow:
+          0 30px 60px rgba(26, 26, 46, 0.22),
+          0 12px 30px rgba(255, 193, 7, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/hero.png" alt="" />
+  </body>
+</html>

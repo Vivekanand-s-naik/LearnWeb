@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Working With Form</h1>
+<form>
+    <fieldset>
+        <legend><b>Login Form</b></legend>
+        <br>
+        <br>
+        <label for="email">Enter Email : </label>
+        <input type="text" placeholder="abc@gmail.com" name="email" id="email">
+        <br>
+        <br>
+        <label for="pass">Password : </label>
+        <input type="password" id="pass" name="pass" minlength="5" placeholder="*******">
+        </label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend><b>Personal Details</b></legend>
+
+        <fieldset>
+            <legend>Gender</legend>
+        <br>
+        <label for="male">Male</label>
+        <input type="radio" name="Gender" id="male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="Gender" id="female" value="female">
+        </fieldset>
+        <br>
+        <label for="branch">Enter Branch</label>
+        <select id="branch"  name="branch">
+            <option value="" disabled selected>Select Branch</option>
+            <option value="CSE">CSE</option>
+            <option value="MECH">Mech</option>
+        </select>
+        <br><br>
+        <label for="java">Java</label>
+        <input type="checkbox" id="java" name="skills" >
+        <label for="Python">Python</label>
+        <input type="checkbox" id="Python" name="skills" >
+        <br><br>
+        <label for="filee">Choose File : </label>
+        <input type="file" id="filee" accept=".pdf,.docx,.doc" >
+        <br><br>
+        <label for="datee">Date : </label>
+        <input type="date" id="datee" min="1990-01-01" max="2010-12-31">
+        <br><br>
+        <button type="submit"><input type="image" src="image.png" height="100px" width="200px"></button>
+        
+
+    </fieldset>
+</form>
+
+<script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js"
+  type="module"
+></script>
+
+<dotlottie-wc
+  src="https://lottie.host/67bf46e5-7c36-4d94-ba6d-2b147172ab92/r1I6JWTOBT.lottie"
+  stateMachineId="StateMachine1"
+  style="width: 100vw;height: 100vh"
+></dotlottie-wc>
+
+</body>
+</html>

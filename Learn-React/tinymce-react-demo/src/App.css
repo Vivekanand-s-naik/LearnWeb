@@ -1,0 +1,14 @@
+/* editor.css */
+.tox .tox-statusbar__text-container {
+  font-size: 12px;
+}
+
+/* Custom placeholder */
+.tox .tox-edit-area::before {
+  content: "Start writing...";
+  position: absolute;
+  color: #999;
+  font-style: italic;
+  pointer-events: none;
+  padding: 10px;
+}

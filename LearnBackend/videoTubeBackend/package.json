@@ -1,0 +1,31 @@
+{
+  "name": "videotubebackend",
+  "version": "1.0.0",
+  "description": "A Fully Flegged Backend Application for Online Video Streaming",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "VideoTube",
+    "Vivek",
+    "mongoose",
+    "backend"
+  ],
+  "author": "Vivekanand S Naik",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.6"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.8.0"
+  }
+}

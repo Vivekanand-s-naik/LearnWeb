@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="main-container">
+        <h1>Timer</h1>
+        <div class="timer-container">
+          <div>
+            <span id="hrs">00</span>
+            Hour
+          </div>
+          <div>
+            <span id="mins">00</span>
+            Min
+          </div>
+          <div>
+            <span id="secs">00</span>
+            Sec
+          </div>
+          <div>
+            <span id="msecs">00</span>
+            MliSec
+          </div>
+        </div>
+        <h3>Progess</h3>
+        <div class="timer-progress-container">
+          <div id="timer-progress-bar"></div>
+        </div>
+      </div>
+      <div class="main-container">
+        <h1>Countdown</h1>
+        <div class="timer-container">
+          <div>
+            <span id="days">00</span>
+            Days
+          </div>
+          <div>
+            <span id="hours">00</span>
+            Hrs
+          </div>
+          <div>
+            <span id="minutes">00</span>
+            Mins
+          </div>
+          <div>
+            <span id="seconds">00</span>
+            Sec
+          </div>
+        </div>
+        <h3>Progess</h3>
+        <div class="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="control-container">
+      <div class="timer-control">
+        <div id="timer-input">
+          <input
+            list="timeParts"
+            name="timePart"
+            placeholder="Time-Part"
+            id="timePart"
+          />
+          <datalist id="timeParts">
+            <option value="15"></option>
+            <option value="30"></option>
+            <option value="45"></option>
+            <option value="60"></option>
+          </datalist>
+        </div>
+        <button type="button" id="pause-timer-btn">Pause</button>
+        <button type="button" id="reset-timer-btn">Reset</button>
+      </div>
+      <div class="stopwatch-control">
+        <input type="datetime-local" name="start-time" id="start-time" />
+        <input type="datetime-local" name="end-time" id="end-time" />
+        <button type="button" id="start-stopwatch-btn">start</button>
+      </div>
+    </div>
+  </body>
+</html>
