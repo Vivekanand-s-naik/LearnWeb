@@ -1,8 +1,15 @@
 import mongoose from "mongoose";
-export const {Schema} = mongoose;
+export const { Schema } = mongoose;
 
 const userSchema = new Schema({
-    username: String,
+    username: {
+        type: String,
+        required: true,
+        trim: true,
+        lowercase: true,
+        unique: true,
+        index: true
+    },
     email: {
         type: String,
         required: [true, "Emai Is Required Field"],
@@ -10,21 +17,36 @@ const userSchema = new Schema({
         trim: true,
         lowercase: true,
         validate: {
-            validator: (value)=>{
+            validator: (value) => {
                 return /^[^\s@]+@[^\s@]+.[^\s@]+$/.test(value)
             },
             message: "Enter Valide Email"
         }
     },
-    fullname: String,
-    avatar: String,
+    fullname: {
+        type: String,
+        required: true,
+        trim: true,
+        index: true
+    },
+    avatar: {
+        type: String,
+        required: true
+    },
     coverimage: String,
-    password: String,
     refreshToken: String,
 
-    // watchHistory: {
-    //     type: Schema.Types.ObjectId
-    // }
-}, {timestamps: true});
+    password: {
+        type: String,
+        required: true
+    },
+
+    watchHistory: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Video"
+        }
+    ]
+}, { timestamps: true });
 
 export const User = mongoose.model("User", userSchema)
