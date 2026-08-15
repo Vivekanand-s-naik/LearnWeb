@@ -7,7 +7,7 @@ const videoSchema = new Schema({
         required: true
     },
 
-    thumbnail= {
+    thumbnail = {
         type: String,
         required: true
     },
@@ -22,7 +22,7 @@ const videoSchema = new Schema({
         required: true
     },
 
-    description= {
+    description = {
         type: String,
     },
 
@@ -33,13 +33,14 @@ const videoSchema = new Schema({
 
     views = {
         type: Number,
-        required: true
+        required: true,
+        default: 0
     },
 
     isPublished = {
         type: Boolean,
         default: false
     }
-}, {timestamps: true});
+}, { timestamps: true });
 
 export const Video = mongoose.model("Video", videoSchema);
