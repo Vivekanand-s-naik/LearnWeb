@@ -76,7 +76,7 @@ userSchema.methods.generateAccessToken = function(){
             expiresIn: process.env.ACCESS_TOKEN_EXPIRY,
             algorithm: 'HS256'
         }
-    )
+    );
 };
 
 userSchema.methods.generateRefreshToken =  function(text){
@@ -89,8 +89,9 @@ userSchema.methods.generateRefreshToken =  function(text){
             expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
             algorithm: 'HS256'
         }
-    )
+    );
 };
+
 export const User = mongoose.model("User", userSchema);
 
 //Generate Random hashcode
