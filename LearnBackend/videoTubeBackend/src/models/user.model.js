@@ -1,5 +1,6 @@
-import mongoose from "mongoose";
-export const { Schema } = mongoose;
+import mongoose, {Schema} from "mongoose";
+import bcrypt from "bcrypt";
+
 
 const userSchema = new Schema({
     username: {
@@ -49,5 +50,17 @@ const userSchema = new Schema({
     ]
 }, { timestamps: true });
 
+//Before Dumping the actual password encrypt it using bcrypt library
+userSchema.pre("save", async function(next){
+    if (this.isModified("password")){
+        this.password = await bcrypt.hash(this.password, 10);
+    }
+    return next();
+})
 
-export const User = mongoose.model("User", userSchema)
+//to compare the password with the encoded password
+userSchema.methods.isCorrectPassword = async function(){
+    return await bcrypt.compare(password, this.password);
+};
+
+export const User = mongoose.model("User", userSchema);
