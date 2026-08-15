@@ -1,6 +1,6 @@
 import mongoose, {Schema} from "mongoose";
 import bcrypt from "bcrypt";
-
+import jwt from "jsonwebtoken";
 
 const userSchema = new Schema({
     username: {
@@ -24,7 +24,7 @@ const userSchema = new Schema({
             message: "Enter Valide Email"
         }
     },
-    fullname: {
+    fullName: {
         type: String,
         required: true,
         trim: true,
@@ -59,8 +59,43 @@ userSchema.pre("save", async function(next){
 })
 
 //to compare the password with the encoded password
-userSchema.methods.isCorrectPassword = async function(){
+userSchema.methods.isCorrectPassword = async function(password){
     return await bcrypt.compare(password, this.password);
 };
 
+userSchema.methods.generateAccessToken = function(){
+    return jwt.sign(
+        {
+            _id: this._id,
+            username: this.username,
+            email: this.email,
+            fullName: this.fullName,
+        },
+        process.env.ACCESS__TOKEN_SECRET,
+        {
+            expiresIn: process.env.ACCESS_TOKEN_EXPIRY,
+            algorithm: 'HS256'
+        }
+    )
+};
+
+userSchema.methods.generateRefreshToken =  function(text){
+    return jwt.sign(
+        {
+            _id: this._id
+        },
+        process.env.REFRESH_TOKEN_SECRET,
+        {
+            expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
+            algorithm: 'HS256'
+        }
+    )
+};
 export const User = mongoose.model("User", userSchema);
+
+//Generate Random hashcode
+(()=>{
+    bcrypt.hash("CodersParadise", 10).then(res=>{
+        console.log(res);
+    });
+})()
